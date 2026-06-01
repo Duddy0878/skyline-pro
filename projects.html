@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Skyline Elevators</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #FBBA13;
+      --gold-light: #FCC84D;
+      --dark: #0a0a0a;
+      --dark-2: #111111;
+      --dark-3: #1a1a1a;
+      --light: #f0ede8;
+      --muted: #888;
+      --font: 'Segoe UI', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--dark); color: var(--light); font-family: var(--font); overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.4rem 4rem;
+      background: rgba(10,10,10,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 44px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--light); text-decoration: none; font-size: 0.85rem;
+      letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.85;
+      transition: color 0.2s, opacity 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); opacity: 1; }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 10rem 4rem 4rem;
+      background: var(--dark-2);
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.75rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 900; line-height: 1; letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+    .page-header p {
+      margin-top: 1rem; font-size: 1rem; color: rgba(240,237,232,0.6);
+      max-width: 500px;
+    }
+    .divider { width: 48px; height: 3px; background: var(--gold); margin: 1.5rem 0; }
+
+    /* GRID */
+    .projects-section { padding: 5rem 4rem; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .project-card .project-thumb {
+      display: block; width: 100%; height: 420px; object-fit: cover;
+    }
+    .project-thumb {
+      width: 100%; height: 420px; background: var(--dark-3);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em;
+      text-transform: uppercase; transition: transform 0.4s; object-fit: cover;
+    }
+    .project-card:hover .project-thumb { transform: scale(1.04); }
+    .project-info { padding: 1.2rem 0 0.5rem; }
+    .project-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .project-info p { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.05em; }
+    .project-tag {
+      display: inline-block;
+      background: rgba(251,186,19,0.12);
+      border: 1px solid rgba(251,186,19,0.3);
+      color: var(--gold); font-size: 0.65rem; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.25rem 0.65rem; margin-top: 0.5rem;
+    }
+    .project-new-badge {
+      position: absolute; top: 0.75rem; right: 0.75rem;
+      background: var(--gold); color: #000; font-size: 0.62rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase; padding: 0.3rem 0.7rem; z-index: 2;
+    }
+
+    /* UPCOMING */
+    .upcoming-section {
+      padding: 5rem 4rem;
+      background: var(--dark-2);
+      border-top: 1px solid #1a1a1a;
+    }
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .upcoming-card {
+      border: 1px solid #222;
+      padding: 2rem 1.5rem;
+      background: var(--dark-3);
+      transition: border-color 0.25s;
+    }
+    .upcoming-card:hover { border-color: rgba(251,186,19,0.4); }
+    .upcoming-tag {
+      display: inline-block;
+      background: rgba(251,186,19,0.1);
+      border: 1px solid rgba(251,186,19,0.3);
+      color: var(--gold); font-size: 0.62rem; letter-spacing: 0.15em;
+      text-transform: uppercase; padding: 0.25rem 0.65rem; margin-bottom: 1rem;
+    }
+    .upcoming-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .upcoming-card p { font-size: 0.82rem; color: rgba(240,237,232,0.55); line-height: 1.6; }
+    .upcoming-placeholder {
+      width: 100%; height: 3px; background: #222; margin-bottom: 1.2rem;
+      position: relative; overflow: hidden;
+    }
+    .upcoming-placeholder::after {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 40%; height: 100%; background: var(--gold);
+    }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* FOOTER */
+    footer {
+      background: #050505; padding: 2.5rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid #1a1a1a;
+    }
+    .footer-logo img { height: 40px; width: auto; display: block; }
+    footer p { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.05em; }
+
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 2rem; }
+      .nav-links { display: none; }
+      .page-header { padding: 8rem 2rem 3rem; }
+      .projects-section, .upcoming-section { padding: 3rem 2rem; }
+      .projects-grid, .upcoming-grid { grid-template-columns: 1fr 1fr; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+    @media (max-width: 580px) {
+      .projects-grid, .upcoming-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo-horizontal.png" alt="Skyline Elevators" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <p class="section-label">Our Work</p>
+    <h1>All Projects</h1>
+    <div class="divider"></div>
+    <p>A full record of completed installations across New York City and beyond.</p>
+  </div>
+
+  <!-- COMPLETED PROJECTS -->
+  <section class="projects-section">
+    <p class="section-label reveal">Completed</p>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:-0.01em;">Delivered Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-355-exterior.jpeg" alt="355 Exterior" />
+        <div class="project-info">
+          <h3>355 Exterior</h3>
+          <p>The Bronx · 45 Floors · 11 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-1723-boston.jpeg" alt="1723 Boston Rd" />
+        <div class="project-info">
+          <h3>1723 Boston Rd</h3>
+          <p>The Bronx · 20+ Floors · 4 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-880-atlantic.jpeg" alt="880 Atlantic" style="object-position: center top; filter: contrast(1.15) brightness(1.05) saturate(1.2);" />
+        <div class="project-info">
+          <h3>880 Atlantic</h3>
+          <p>Brooklyn · 20 Stops · 5 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-102-fleet.jpg" alt="102 Fleet Pl" />
+        <div class="project-info">
+          <h3>102 Fleet Pl</h3>
+          <p>32 Floors · 10 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: auto 135%; background-position: 25% 20%;"></div>
+        <div class="project-info">
+          <h3>188 Bainbridge</h3>
+          <p>9 Floors · 2 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-162-east36.png" alt="162 East 36th" />
+        <div class="project-info">
+          <h3>162 East 36th St</h3>
+          <p>New York · 26 Stops · 2 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story Ave" style="object-position: center 15%;" />
+        <div class="project-info">
+          <h3>1580 Story Ave</h3>
+          <p>The Bronx · 25 Floors · 8 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/bergan.jpeg" alt="280 Bergen" style="object-position: center 30%;" />
+        <div class="project-info">
+          <h3>280 Bergen</h3>
+          <p>Brooklyn · 30 Stops · 8 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" style="object-position: center 20%;" />
+        <div class="project-info">
+          <h3>370 Livingston</h3>
+          <p>Brooklyn · 24 Floors · 6 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" style="object-position: center 10%;" />
+        <div class="project-info">
+          <h3>1655 1st Ave</h3>
+          <p>New York · 50 Floors · 4 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-234-clarkson.png" alt="234 Clarkson" style="object-position: center center;" />
+        <span class="project-new-badge">New</span>
+        <div class="project-info">
+          <h3>234 Clarkson</h3>
+          <p>Brooklyn · 3 Floors · 2 Elevators</p>
+          <span class="project-tag">New Installation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING PROJECTS -->
+  <section class="upcoming-section">
+    <p class="section-label reveal">Coming Soon</p>
+    <h2 class="reveal" style="font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:-0.01em;">Upcoming Projects</h2>
+    <div class="divider reveal"></div>
+    <div class="upcoming-grid">
+      <div class="upcoming-card reveal">
+        <div class="upcoming-placeholder"></div>
+        <span class="upcoming-tag">Upcoming</span>
+        <h3>Project Coming Soon</h3>
+        <p>Details will be announced. Stay tuned.</p>
+      </div>
+      <div class="upcoming-card reveal">
+        <div class="upcoming-placeholder"></div>
+        <span class="upcoming-tag">Upcoming</span>
+        <h3>Project Coming Soon</h3>
+        <p>Details will be announced. Stay tuned.</p>
+      </div>
+      <div class="upcoming-card reveal">
+        <div class="upcoming-placeholder"></div>
+        <span class="upcoming-tag">Upcoming</span>
+        <h3>Project Coming Soon</h3>
+        <p>Details will be announced. Stay tuned.</p>
+      </div>
+      <div class="upcoming-card reveal">
+        <div class="upcoming-placeholder"></div>
+        <span class="upcoming-tag">Upcoming</span>
+        <h3>Project Coming Soon</h3>
+        <p>Details will be announced. Stay tuned.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="logo-horizontal.png" alt="Skyline Elevators" />
+    </div>
+    <p>© 2026 Skyline Elevators NY. All rights reserved.</p>
+    <p>Licensed · Bonded · Insured</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

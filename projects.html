@@ -81,11 +81,11 @@
       cursor: pointer;
     }
     .project-card .project-thumb {
-      display: block; width: 100%; height: 420px;
+      display: block; width: 100%; height: 520px;
       object-fit: cover; object-position: center center;
     }
     .project-thumb {
-      width: 100%; height: 420px; background: var(--dark-3);
+      width: 100%; height: 520px; background: var(--dark-3);
       display: flex; align-items: center; justify-content: center;
       color: var(--muted); font-size: 0.75rem; letter-spacing: 0.1em;
       text-transform: uppercase; transition: transform 0.4s; object-fit: cover;
@@ -94,6 +94,7 @@
     .project-info { padding: 1.2rem 0 0.5rem; }
     .project-info h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
     .project-info p { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.05em; }
+    .project-fpm { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.2rem; display: block; }
     .project-tag {
       display: inline-block;
       background: rgba(251,186,19,0.12);
@@ -208,14 +209,13 @@
 
   <!-- COMPLETED PROJECTS -->
   <section class="projects-section">
-    <p class="section-label reveal">Completed</p>
-    <h2 class="reveal" style="font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:-0.01em;">Delivered Projects</h2>
     <div class="projects-grid">
       <div class="project-card reveal">
         <img class="project-thumb" src="projects/project-355-exterior.jpeg" alt="355 Exterior" />
         <div class="project-info">
           <h3>355 Exterior</h3>
-          <p>The Bronx · 42 Stops · 3800FPM · 2500FPM · 3200FPM · 2 Freight</p>
+          <p>Bronx · 42 Stops · 10 Elevators</p>
+          <span class="project-fpm">3 @ 800FPM · 2 @ 500FPM · 3 @ 200FPM · 2 Freight</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -223,7 +223,8 @@
         <img class="project-thumb" src="projects/project-1723-boston.jpeg" alt="1723 Boston Rd" />
         <div class="project-info">
           <h3>1723 Boston Rd</h3>
-          <p>The Bronx · 10 Stops · 2 Elevators</p>
+          <p>Bronx · 10 Stops · 2 Elevators</p>
+          <span class="project-fpm">350FPM</span>
           <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
@@ -231,39 +232,44 @@
         <img class="project-thumb" src="projects/project-880-atlantic.jpeg" alt="880 Atlantic" />
         <div class="project-info">
           <h3>880 Atlantic</h3>
-          <p>Brooklyn · 20 Stops · 5 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 18 Stops · 3 Elevators</p>
+          <span class="project-fpm">2 @ 500FPM · 1 Hydro</span>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
         <img class="project-thumb" src="projects/project-102-fleet.jpg" alt="102 Fleet Pl" />
         <div class="project-info">
           <h3>102 Fleet Pl</h3>
-          <p>32 Stops · 5 Elevators · 500FPM · 1 Freight · 1 Hydro · 1 Wheelchair</p>
+          <p>Brooklyn · 32 Stops · 8 Elevators</p>
+          <span class="project-fpm">5 @ 500FPM · 1 Freight · 1 Hydro · 1 Wheelchair</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: cover; background-position: center 30%;"></div>
+        <img class="project-thumb" src="projects/project-188-bainbridge.png" alt="188 Bainbridge" style="object-position: center 30%;" />
         <div class="project-info">
           <h3>188 Bainbridge</h3>
-          <p>9 Stops · 2 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 6 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-162-east36.png" alt="162 East 36th" />
+        <img class="project-thumb" src="projects/project-162-east36.png" alt="162 East 36th" style="object-position: top center;" />
         <div class="project-info">
           <h3>162 East 36th St</h3>
-          <p>New York · 26 Stops · 2 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>Manhattan · 24 Stops · 2 Elevators</p>
+          <span class="project-fpm">500FPM</span>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
         <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story Ave" />
         <div class="project-info">
           <h3>1580 Story Ave</h3>
-          <p>The Bronx · 22 Stops · 8 Elevators · 500FPM</p>
+          <p>Bronx · 22 Stops · 8 Elevators</p>
+          <span class="project-fpm">500FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -271,7 +277,8 @@
         <img class="project-thumb" src="projects/bergan.jpeg" alt="280 Bergen" />
         <div class="project-info">
           <h3>280 Bergen</h3>
-          <p>Brooklyn · 14 Stops · 8350FPM · 1 Hydro</p>
+          <p>Brooklyn · 14 Stops · 9 Elevators</p>
+          <span class="project-fpm">8 @ 350FPM · 1 Hydro</span>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
@@ -279,7 +286,8 @@
         <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" />
         <div class="project-info">
           <h3>370 Livingston</h3>
-          <p>Brooklyn · 26 Stops · 6 Elevators · 500FPM</p>
+          <p>Brooklyn · 26 Stops · 6 Elevators</p>
+          <span class="project-fpm">500FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -287,7 +295,8 @@
         <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" />
         <div class="project-info">
           <h3>1655 1st Ave</h3>
-          <p>New York · 25 Stops · 4500FPM</p>
+          <p>Manhattan · 25 Stops · 4 Elevators</p>
+          <span class="project-fpm">500FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -296,7 +305,8 @@
         <span class="project-new-badge">New</span>
         <div class="project-info">
           <h3>234 Clarkson</h3>
-          <p>Brooklyn · 11 Stops · 4200FPM</p>
+          <p>Brooklyn · 11 Stops · 4 Elevators</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
@@ -304,23 +314,26 @@
         <img class="project-thumb" src="projects/project-100-lee.png" alt="100 Lee" />
         <div class="project-info">
           <h3>108 Lee Ave</h3>
-          <p>Brooklyn · 9 Stops · 1200FPM</p>
+          <p>Brooklyn · 9 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-735-myrtle.jpeg" alt="735 Myrtle" />
+        <img class="project-thumb" src="projects/project-735-myrtle.jpeg" alt="735 Myrtle" style="object-position: top center;" />
         <div class="project-info">
           <h3>735 Myrtle Ave</h3>
-          <p>Brooklyn · 10 Stops · 1200FPM</p>
+          <p>Brooklyn · 10 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-65-franklin.jpeg" alt="65 Franklin" />
+        <img class="project-thumb" src="projects/project-65-franklin.jpeg" alt="65 Franklin" style="object-position: top center;" />
         <div class="project-info">
           <h3>65 Franklin St</h3>
-          <p>New York · 27 Stops · 3 Elevators · 500FPM</p>
+          <p>Manhattan · 27 Stops · 3 Elevators</p>
+          <span class="project-fpm">500FPM</span>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
@@ -328,15 +341,17 @@
         <img class="project-thumb" src="projects/project-498-columbia.jpeg" alt="498 Columbia" />
         <div class="project-info">
           <h3>498 Columbia St</h3>
-          <p>Brooklyn · 9 Stops · 1 Elevator</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 9 Stops · 5 Elevators</p>
+          <span class="project-fpm">4 @ 280FPM · 1 Hydro</span>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-178-throop.jpeg" alt="178 Throop" />
+        <img class="project-thumb" src="projects/project-178-throop.jpeg" alt="178 Throop" style="object-position: top center;" />
         <div class="project-info">
           <h3>178 Throop Ave</h3>
-          <p>Brooklyn · 9 Stops · 1200FPM</p>
+          <p>Brooklyn · 9 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -344,31 +359,35 @@
         <img class="project-thumb" src="projects/project-eastchester.jpeg" alt="East Chester" />
         <div class="project-info">
           <h3>3377 Eastchester Rd</h3>
-          <p>The Bronx · 5 Stops · 1200FPM</p>
+          <p>Bronx · 5 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-16-lenox.jpeg" alt="16 Lenox" />
+        <img class="project-thumb" src="projects/project-16-lenox.jpeg" alt="16 Lenox" style="object-position: top center;" />
         <div class="project-info">
           <h3>16 Lenox Ave</h3>
-          <p>New York · 11 Stops · 1350FPM</p>
+          <p>Manhattan · 11 Stops · 1 Elevator</p>
+          <span class="project-fpm">350FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-535-grand.png" alt="535 Grand" />
+        <img class="project-thumb" src="projects/project-535-grand.png" alt="535 Grand" style="object-position: top center;" />
         <div class="project-info">
           <h3>535 Grand St</h3>
-          <p>Brooklyn · 8 Stops · 1200FPM</p>
+          <p>Brooklyn · 8 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-35-w125.jpeg" alt="35 W 125th" />
+        <img class="project-thumb" src="projects/project-35-w125.jpeg" alt="35 W 125th" style="object-position: top center;" />
         <div class="project-info">
           <h3>35 W 125th St</h3>
-          <p>New York · 23 Stops · 2500FPM</p>
+          <p>Manhattan · 23 Stops · 2 Elevators</p>
+          <span class="project-fpm">500FPM</span>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -376,40 +395,42 @@
         <img class="project-thumb" src="projects/project-440-40st.png" alt="440 40th St" />
         <div class="project-info">
           <h3>440 40th St</h3>
-          <p>Brooklyn · 6 Stops · 1200FPM</p>
+          <p>Brooklyn · 6 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-67-4th.jpeg" alt="67 4th Ave" />
+        <img class="project-thumb" src="projects/project-67-4th.jpeg" alt="67 4th Ave" style="object-position: top center;" />
         <div class="project-info">
           <h3>67 4th Ave</h3>
           <p>Brooklyn · 15 Stops · 2 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-448-park.png" alt="448 Park" />
+        <img class="project-thumb" src="projects/project-448-park.png" alt="448 Park" style="object-position: top center;" />
         <div class="project-info">
           <h3>448 Park Ave</h3>
-          <p>Brooklyn · 6 Stops · 1 Elevator</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 9 Stops · 1 Elevator</p>
+          <span class="project-fpm">200FPM</span>
+          <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
         <img class="project-thumb" src="projects/project-343-himrod.jpeg" alt="343 Himrod" />
         <div class="project-info">
           <h3>343 Himrod St</h3>
-          <p>Brooklyn · 12 Stops · 2 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 12 Stops · 2 200FPM</p>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-101-myrtle-si.jpeg" alt="101 Myrtle Staten Island" />
+        <img class="project-thumb" src="projects/project-101-myrtle-si.jpeg" alt="101 Myrtle Staten Island" style="object-position: top center;" />
         <div class="project-info">
           <h3>101 Myrtle Ave</h3>
-          <p>Staten Island · 3 Stops · 1 Elevator</p>
-          <span class="project-tag">New Installation</span>
+          <p>Staten Island · 3 Stops · 1 Hydro</p>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
@@ -499,6 +520,21 @@
       <div class="project-card reveal">
         <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
         <div class="project-info"><h3>37 40th St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>313 E 17th St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/image.png" alt="75 Nassau St" />
+        <div class="project-info">
+          <h3>75 Nassau St</h3>
+          <p>4 Elevators</p>
+          <span class="project-fpm">4 @ 1400FPM</span>
+          <span class="project-tag tag-upcoming">Upcoming</span>
+        </div>
       </div>
 
     </div>

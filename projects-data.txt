@@ -3,11 +3,11 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 ========================================================================
 
 355 Exterior             | Floors: 42  | Elevators: 3 800FPM 2 500FPM 3 200FPM 2 frieght     | Status: in progress
-1723 Boston Rd           | Floors: 10  | Elevators: 2  | Status: Completed
-880 Atlantic             | Floors: 20  | Elevators: 5  | Status:
+1723 Boston Rd           | Floors: 10  | Elevators: 2 350fpm  | Status: Completed
+880 Atlantic             | Floors: 18  | Elevators: 2 500fpm 1 hydro  | Status: competed
 102 Fleet Pl             | Floors: 32  | Elevators: 5 Runing at 500FPM 1 Freight 1 Hydro 1 wheel chair lift | Status: In proggress
-188 Bainbridge           | Floors: 9   | Elevators: 2  | Status:
-162 East 36th St         | Floors: 26  | Elevators: 2  | Status:
+188 Bainbridge           | Floors: 6   | Elevators: 1 200fpm  | Status:completed
+162 East 36th St         | Floors: 24  | Elevators: 2 500fpm  | Status:completed
 1580 Story Ave           | Floors: 22  | Elevators: 8 500FPM  | Status: In progress
 280 Bergen               | Floors: 14  | Elevators: 8 350FPM 1 Hydro  | Status: upcoming
 370 Livingston           | Floors: 26  | Elevators: 6 500FPM  | Status: in progress
@@ -16,17 +16,17 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 108 Lee Ave              | Floors: 9 | Elevators: 1 200Fpm | Status: Completed
 735 Myrtle Ave           | Floors: 10  | Elevators: 1 200fpm  | Status: in progress
 65 Franklin St           | Floors: 27 | Elevators: 3 500FMP  | Status: Upcoming
-498 Columbia St          | Floors: 9   | Elevators: 1  | Status:
+498 Columbia St          | Floors: 9   | Elevators: 4 280fpm 1 hydro  | Status: completed
 178 Throop Ave           | Floors: 9   | Elevators: 1 200fpm  | Status: in progress
 3377 Eastchester Rd      | Floors: 5  | Elevators: 1 200fpm  | Status: upcoming
 16 Lenox Ave             | Floors: 11  | Elevators: 1 350Mpf | Status: in progress
 535 Grand St             | Floors: 8  | Elevators: 1 200FPM  | Status: compltede
 35 W 125th St            | Floors: 23  | Elevators: 2 500fpm | Status: in progress
-440 40th St              | Floors: 6  | Elevators: 1 200fpm  | Status: upcoming
-67 4th Ave               | Floors: 15  | Elevators: 2  | Status:
-448 Park Ave             | Floors: 6   | Elevators: 1  | Status:
-343 Himrod St            | Floors: 12  | Elevators: 2  | Status:
-101 Myrtle Ave SI        | Floors: 3   | Elevators: 1  | Status:
+41040 40th St              | Floors: 6  | Elevators: 1 200fpm  | Status: upcoming
+67 4th Ave               | Floors: 15  | Elevators: 2  | Status: upcomimng
+448 Park Ave             | Floors: 9   | Elevators: 1 200fpm  | Status: in progress
+343 Himrod St            | Floors: 12  | Elevators: 2 200fpm | Status: completed
+101 Myrtle Ave SI        | Floors: 3   | Elevators: 1 hydro | Status: completed
 860 Flushing Ave         | Floors: 13  | Elevators: 2  | Status:
 1042 Atlantic Ave        | Floors:     | Elevators:    | Status:
 547 Coney Island Ave     | Floors:     | Elevators:    | Status:
@@ -44,3 +44,4 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 219 Herman St            | Floors:     | Elevators:    | Status:
 47 Broadway              | Floors:     | Elevators:    | Status:
 37 40th St               | Floors:     | Elevators:    | Status:
+313 E 17th St            | Floors:     | Elevators:    | Status:

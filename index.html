@@ -253,7 +253,7 @@
       background: var(--gold);
       padding: 2.5rem 4rem;
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       text-align: center;
       gap: 2rem;
     }
@@ -434,6 +434,52 @@
       margin-top: 0.5rem;
     }
 
+    /* ─── CAREERS ─── */
+    #careers {
+      background: var(--dark-2);
+      padding: 6rem 4rem;
+    }
+    .careers-wrap {
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+    }
+    .crew-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+    .crew-photo {
+      height: 220px;
+      overflow: hidden;
+      background: var(--dark-3);
+    }
+    .crew-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      transition: transform 0.4s, filter 0.4s;
+      filter: blur(4px) brightness(0.85);
+    }
+    .crew-photo:hover img { transform: scale(1.05); filter: blur(4px) brightness(0.85); }
+.crew-photo.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px dashed #2a2a2a;
+    }
+    @media (max-width: 900px) {
+      .crew-grid { grid-template-columns: 1fr 1fr; }
+      #careers { padding: 4rem 2rem; }
+    }
+    @media (max-width: 580px) {
+      .crew-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── CONTACT ─── */
     #contact {
       background: var(--dark);
@@ -574,6 +620,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#careers">Careers</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -612,10 +659,6 @@
       <div class="stat-label">Elevators Installed</div>
     </div>
     <div>
-      <div class="stat-num">20+</div>
-      <div class="stat-label">Years Experience</div>
-    </div>
-    <div>
       <div class="stat-num">100%</div>
       <div class="stat-label">Client Satisfaction</div>
     </div>
@@ -628,7 +671,7 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="about-img-wrap reveal">
-      <img src="image.png" alt="Skyline Elevators technician on site" />
+      <img src="about-photo.png" alt="Skyline Elevators technician on site" />
     </div>
     <div>
       <p class="section-label reveal">Who We Are</p>
@@ -698,7 +741,7 @@
         <img class="project-thumb" src="projects/project-355-exterior.jpeg" alt="355 exterior The Bronx" />
         <div class="project-info">
           <h3>355 Exterior</h3>
-          <p>The Bronx · 45 Floors · 11 Elevators</p>
+          <p>The Bronx · 45 Stops · 11 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -706,7 +749,7 @@
         <img class="project-thumb" src="projects/project-1723-boston.jpeg" alt="1723 Boston Rd" />
         <div class="project-info">
           <h3>1723 Boston Rd</h3>
-          <p>The Bronx · 20+ Floors · 4 Elevators</p>
+          <p>The Bronx · 20+ Stops · 4 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -722,15 +765,15 @@
         <img class="project-thumb" src="projects/project-102-fleet.jpg" alt="102 Fleet" />
         <div class="project-info">
           <h3>102 Fleet Pl</h3>
-          <p>32 Floors · 10 Elevators</p>
+          <p>32 Stops · 10 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: auto 135%; background-position: 25% 20%;"></div>
+        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: cover; background-position: center 30%;"></div>
         <div class="project-info">
           <h3>188 Bainbridge</h3>
-          <p>9 Floors · 2 Elevators</p>
+          <p>9 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -746,7 +789,7 @@
         <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story" style="object-position: center 15%;" />
         <div class="project-info">
           <h3>1580 Story Ave</h3>
-          <p>The Bronx · 25 Floors · 8 Elevators</p>
+          <p>The Bronx · 25 Stops · 8 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -763,7 +806,7 @@
         <span class="project-new-badge">New</span>
         <div class="project-info">
           <h3>234 Clarkson</h3>
-          <p>Brooklyn · 3 Floors · 2 Elevators</p>
+          <p>Brooklyn · 3 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -771,7 +814,7 @@
         <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" style="object-position: center 20%;" />
         <div class="project-info">
           <h3>370 Livingston</h3>
-          <p>Brooklyn · 24 Floors · 6 Elevators</p>
+          <p>Brooklyn · 24 Stops · 6 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -779,7 +822,7 @@
         <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" style="object-position: center 10%;" />
         <div class="project-info">
           <h3>1655 1st Ave</h3>
-          <p>New York · 50 Floors · 4 Elevators</p>
+          <p>New York · 50 Stops · 4 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -796,13 +839,35 @@
     </div>
   </section>
 
+  <!-- JOIN OUR TEAM -->
+  <section id="careers">
+    <p class="section-label reveal">Careers</p>
+    <h2 class="section-title reveal">Join Our Team</h2>
+    <div class="divider reveal"></div>
+    <div class="careers-wrap reveal">
+      <p class="section-body">We're always looking for skilled, motivated elevator mechanics and apprentices to join the Skyline family. If you take pride in your craft and want to work on some of New York City's most exciting buildings — we want to hear from you.</p>
+      <a href="#contact" class="btn btn-primary" style="margin-top:2rem; display:inline-block;">Get In Touch</a>
+    </div>
+    <div class="crew-grid reveal">
+      <div class="crew-photo"><img src="hershy.jpeg" alt="Skyline crew installing elevator" /></div>
+      <div class="crew-photo"><img src="work/crew-rails.jpeg" alt="Installing guide rails" style="object-position: center 20%;" /></div>
+      <div class="crew-photo"><img src="work/crew-shaft.jpeg" alt="Technician in hoistway" style="object-position: center 30%;" /></div>
+      <div class="crew-photo"><img src="work/crew-passed.jpeg" alt="Team inspection passed" style="object-position: center 15%;" /></div>
+      <div class="crew-photo"><img src="work/crew-pit.jpeg" alt="Skyline crew in pit" style="object-position: center 20%;" /></div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact">
     <div>
       <p class="section-label reveal">Get In Touch</p>
       <h2 class="section-title reveal">Request a Free<br>Consultation</h2>
       <div class="divider reveal"></div>
-      <form class="contact-form reveal" onsubmit="return false;">
+      <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="d0cc6b61-60cd-4945-830e-68675eb1380f" />
+        <input type="hidden" name="subject" value="New Inquiry — Skyline Elevators NY" />
+        <input type="hidden" name="from_name" value="Skyline Elevators Website" />
+        <input type="checkbox" name="botcheck" style="display:none;" />
         <div class="form-row">
           <div class="form-field">
             <label>First Name</label>
@@ -825,7 +890,9 @@
           <label>Message</label>
           <textarea placeholder="Tell us about your project…"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+        <p id="formSuccess" style="display:none; margin-top:1rem; color:var(--gold); font-size:0.9rem; letter-spacing:0.05em;">✓ Message sent! We'll be in touch shortly.</p>
+        <p id="formError" style="display:none; margin-top:1rem; color:#e55; font-size:0.9rem;">Something went wrong. Please try again or email us directly.</p>
       </form>
     </div>
     <div class="contact-info reveal">
@@ -891,6 +958,31 @@
   </footer>
 
   <script>
+    // Contact form submission
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        const data = new FormData(form);
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('formSuccess').style.display = 'block';
+          document.getElementById('formError').style.display = 'none';
+          form.reset();
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+        } else {
+          document.getElementById('formError').style.display = 'block';
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+        }
+      });
+    }
+
     // Sticky nav style on scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {

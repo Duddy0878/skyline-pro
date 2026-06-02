@@ -81,7 +81,8 @@
       cursor: pointer;
     }
     .project-card .project-thumb {
-      display: block; width: 100%; height: 420px; object-fit: cover;
+      display: block; width: 100%; height: 420px;
+      object-fit: cover; object-position: center center;
     }
     .project-thumb {
       width: 100%; height: 420px; background: var(--dark-3);
@@ -100,6 +101,20 @@
       color: var(--gold); font-size: 0.65rem; letter-spacing: 0.1em;
       text-transform: uppercase; padding: 0.25rem 0.65rem; margin-top: 0.5rem;
     }
+    .coming-soon-thumb {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+    }
+    .coming-soon-thumb img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      opacity: 0.2;
+    }
+    .tag-completed { background: rgba(50,200,100,0.12); border-color: rgba(50,200,100,0.4); color: #4caf7d; }
+    .tag-inprogress { background: rgba(251,186,19,0.12); border-color: rgba(251,186,19,0.4); color: var(--gold); }
+    .tag-upcoming { background: rgba(150,150,150,0.1); border-color: rgba(150,150,150,0.3); color: #999; }
     .project-new-badge {
       position: absolute; top: 0.75rem; right: 0.75rem;
       background: var(--gold); color: #000; font-size: 0.62rem; font-weight: 800;
@@ -114,8 +129,8 @@
     }
     .upcoming-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.25rem;
       margin-top: 3rem;
     }
     .upcoming-card {
@@ -123,25 +138,24 @@
       padding: 2rem 1.5rem;
       background: var(--dark-3);
       transition: border-color 0.25s;
+      text-align: center;
     }
     .upcoming-card:hover { border-color: rgba(251,186,19,0.4); }
+    .upcoming-logo {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 1.25rem;
+      opacity: 0.35;
+    }
+    .upcoming-logo img { width: 100%; height: 100%; object-fit: contain; }
     .upcoming-tag {
       display: inline-block;
       background: rgba(251,186,19,0.1);
       border: 1px solid rgba(251,186,19,0.3);
       color: var(--gold); font-size: 0.62rem; letter-spacing: 0.15em;
-      text-transform: uppercase; padding: 0.25rem 0.65rem; margin-bottom: 1rem;
+      text-transform: uppercase; padding: 0.25rem 0.65rem; margin-bottom: 0.85rem;
     }
-    .upcoming-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .upcoming-card p { font-size: 0.82rem; color: rgba(240,237,232,0.55); line-height: 1.6; }
-    .upcoming-placeholder {
-      width: 100%; height: 3px; background: #222; margin-bottom: 1.2rem;
-      position: relative; overflow: hidden;
-    }
-    .upcoming-placeholder::after {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 40%; height: 100%; background: var(--gold);
-    }
+    .upcoming-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--light); }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -201,7 +215,7 @@
         <img class="project-thumb" src="projects/project-355-exterior.jpeg" alt="355 Exterior" />
         <div class="project-info">
           <h3>355 Exterior</h3>
-          <p>The Bronx · 45 Floors · 11 Elevators</p>
+          <p>The Bronx · 45 Stops · 11 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -209,12 +223,12 @@
         <img class="project-thumb" src="projects/project-1723-boston.jpeg" alt="1723 Boston Rd" />
         <div class="project-info">
           <h3>1723 Boston Rd</h3>
-          <p>The Bronx · 20+ Floors · 4 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>The Bronx · 10 Stops · 2 Elevators</p>
+          <span class="project-tag tag-completed">Completed</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-880-atlantic.jpeg" alt="880 Atlantic" style="object-position: center 30%;" />
+        <img class="project-thumb" src="projects/project-880-atlantic.jpeg" alt="880 Atlantic" />
         <div class="project-info">
           <h3>880 Atlantic</h3>
           <p>Brooklyn · 20 Stops · 5 Elevators</p>
@@ -225,15 +239,15 @@
         <img class="project-thumb" src="projects/project-102-fleet.jpg" alt="102 Fleet Pl" />
         <div class="project-info">
           <h3>102 Fleet Pl</h3>
-          <p>32 Floors · 10 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>32 Stops · 5 Elevators · 500FPM · 1 Freight · 1 Hydro · 1 Wheelchair</p>
+          <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: auto 135%; background-position: 25% 20%;"></div>
+        <div class="project-thumb" style="background-image: url('projects/project-188-bainbridge.png'); background-size: cover; background-position: center 30%;"></div>
         <div class="project-info">
           <h3>188 Bainbridge</h3>
-          <p>9 Floors · 2 Elevators</p>
+          <p>9 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
@@ -246,15 +260,15 @@
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story Ave" style="object-position: center 15%;" />
+        <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story Ave" />
         <div class="project-info">
           <h3>1580 Story Ave</h3>
-          <p>The Bronx · 25 Floors · 8 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>The Bronx · 22 Stops · 8 Elevators · 500FPM</p>
+          <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/bergan.jpeg" alt="280 Bergen" style="object-position: center 30%;" />
+        <img class="project-thumb" src="projects/bergan.jpeg" alt="280 Bergen" />
         <div class="project-info">
           <h3>280 Bergen</h3>
           <p>Brooklyn · 30 Stops · 8 Elevators</p>
@@ -262,185 +276,235 @@
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" />
         <div class="project-info">
           <h3>370 Livingston</h3>
-          <p>Brooklyn · 24 Floors · 6 Elevators</p>
-          <span class="project-tag">New Installation</span>
+          <p>Brooklyn · 26 Stops · 6 Elevators · 500FPM</p>
+          <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" style="object-position: center 10%;" />
+        <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" />
         <div class="project-info">
           <h3>1655 1st Ave</h3>
-          <p>New York · 50 Floors · 4 Elevators</p>
+          <p>New York · 25 Stops · 4 Elevators · 500FPM</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-234-clarkson.png" alt="234 Clarkson" style="object-position: center center;" />
+        <img class="project-thumb" src="projects/project-234-clarkson.png" alt="234 Clarkson" />
         <span class="project-new-badge">New</span>
         <div class="project-info">
           <h3>234 Clarkson</h3>
-          <p>Brooklyn · 3 Floors · 2 Elevators</p>
+          <p>Brooklyn · 3 Stops · 4 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-100-lee.png" alt="100 Lee" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-100-lee.png" alt="100 Lee" />
         <div class="project-info">
           <h3>100 Lee Ave</h3>
-          <p>Brooklyn · 16 Floors · 1 Elevator</p>
+          <p>Brooklyn · 16 Stops · 1 Elevator</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-735-myrtle.jpeg" alt="735 Myrtle" style="object-position: center 15%;" />
+        <img class="project-thumb" src="projects/project-735-myrtle.jpeg" alt="735 Myrtle" />
         <div class="project-info">
           <h3>735 Myrtle Ave</h3>
-          <p>Brooklyn · 10 Floors · 2 Elevators</p>
+          <p>Brooklyn · 10 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-65-franklin.jpeg" alt="65 Franklin" style="object-position: center 10%;" />
+        <img class="project-thumb" src="projects/project-65-franklin.jpeg" alt="65 Franklin" />
         <div class="project-info">
           <h3>65 Franklin St</h3>
-          <p>New York · 18 Floors · 1 Elevator</p>
-          <span class="project-tag">New Installation</span>
+          <p>New York · 27 Stops · 3 Elevators · 500FPM</p>
+          <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-498-columbia.jpeg" alt="498 Columbia" style="object-position: center 25%;" />
+        <img class="project-thumb" src="projects/project-498-columbia.jpeg" alt="498 Columbia" />
         <div class="project-info">
           <h3>498 Columbia St</h3>
-          <p>Brooklyn · 9 Floors · 1 Elevator</p>
+          <p>Brooklyn · 9 Stops · 1 Elevator</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-178-throop.jpeg" alt="178 Throop" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-178-throop.jpeg" alt="178 Throop" />
         <div class="project-info">
           <h3>178 Throop Ave</h3>
-          <p>Brooklyn · 6 Floors · 2 Elevators</p>
+          <p>Brooklyn · 6 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-eastchester.jpeg" alt="East Chester" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-eastchester.jpeg" alt="East Chester" />
         <div class="project-info">
-          <h3>East Chester</h3>
-          <p>The Bronx · 14 Floors · 6 Elevators</p>
+          <h3>3377 Eastchester Rd</h3>
+          <p>The Bronx · 14 Stops · 6 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-16-lenox.jpeg" alt="16 Lenox" style="object-position: center 15%;" />
+        <img class="project-thumb" src="projects/project-16-lenox.jpeg" alt="16 Lenox" />
         <div class="project-info">
           <h3>16 Lenox Ave</h3>
-          <p>New York · 8 Floors · 1 Elevator</p>
+          <p>New York · 8 Stops · 1 Elevator</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-535-grand.png" alt="535 Grand" style="object-position: center 10%;" />
+        <img class="project-thumb" src="projects/project-535-grand.png" alt="535 Grand" />
         <div class="project-info">
           <h3>535 Grand St</h3>
-          <p>Brooklyn · 10 Floors · 3 Elevators</p>
+          <p>Brooklyn · 10 Stops · 3 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-35-w125.jpeg" alt="35 W 125th" style="object-position: center 15%;" />
+        <img class="project-thumb" src="projects/project-35-w125.jpeg" alt="35 W 125th" />
         <div class="project-info">
           <h3>35 W 125th St</h3>
-          <p>New York · 16 Floors · 2 Elevators</p>
+          <p>New York · 16 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-440-40st.png" alt="440 40th St" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-440-40st.png" alt="440 40th St" />
         <div class="project-info">
           <h3>440 40th St</h3>
-          <p>Brooklyn · 7 Floors · 2 Elevators</p>
+          <p>Brooklyn · 7 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-67-4th.jpeg" alt="67 4th Ave" style="object-position: center 10%;" />
+        <img class="project-thumb" src="projects/project-67-4th.jpeg" alt="67 4th Ave" />
         <div class="project-info">
           <h3>67 4th Ave</h3>
-          <p>Brooklyn · 15 Floors · 2 Elevators</p>
+          <p>Brooklyn · 15 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-448-park.png" alt="448 Park" style="object-position: center 15%;" />
+        <img class="project-thumb" src="projects/project-448-park.png" alt="448 Park" />
         <div class="project-info">
           <h3>448 Park Ave</h3>
-          <p>Brooklyn · 6 Floors · 1 Elevator</p>
+          <p>Brooklyn · 6 Stops · 1 Elevator</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-343-himrod.jpeg" alt="343 Himrod" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-343-himrod.jpeg" alt="343 Himrod" />
         <div class="project-info">
           <h3>343 Himrod St</h3>
-          <p>Brooklyn · 12 Floors · 2 Elevators</p>
+          <p>Brooklyn · 12 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-101-myrtle-si.jpeg" alt="101 Myrtle Staten Island" style="object-position: center 30%;" />
+        <img class="project-thumb" src="projects/project-101-myrtle-si.jpeg" alt="101 Myrtle Staten Island" />
         <div class="project-info">
           <h3>101 Myrtle Ave</h3>
-          <p>Staten Island · 3 Floors · 1 Elevator</p>
+          <p>Staten Island · 3 Stops · 1 Elevator</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
       <div class="project-card reveal">
-        <img class="project-thumb" src="projects/project-860-flushing.jpeg" alt="860 Flushing Ave" style="object-position: center 20%;" />
+        <img class="project-thumb" src="projects/project-860-flushing.jpeg" alt="860 Flushing Ave" />
         <div class="project-info">
           <h3>860 Flushing Ave</h3>
-          <p>Brooklyn · 13 Floors · 2 Elevators</p>
+          <p>Brooklyn · 13 Stops · 2 Elevators</p>
           <span class="project-tag">New Installation</span>
         </div>
       </div>
+
+      <div class="project-card reveal">
+        <img class="project-thumb" src="projects/project-1042-atlantic.jpeg" alt="1042 Atlantic Ave" />
+        <div class="project-info"><h3>1042 Atlantic Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>547 Coney Island Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>177 Wyckoff Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>449 Broadway</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>950 Fingerboard Rd</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>1805 University Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>74 Throop Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>1305 Rockaway Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>1537 Vyse Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>682 Bedford Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>1935 Bedford Ave</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>670 Thomas St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>247 E 117th St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>219 Herman St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>47 Broadway</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-thumb coming-soon-thumb"><img src="logo-icon.png" alt="" /></div>
+        <div class="project-info"><h3>37 40th St</h3><p>Photo Coming Soon</p><span class="project-tag">New Installation</span></div>
+      </div>
+
     </div>
   </section>
 
-  <!-- UPCOMING PROJECTS -->
-  <section class="upcoming-section">
-    <p class="section-label reveal">Coming Soon</p>
-    <h2 class="reveal" style="font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;letter-spacing:-0.01em;">Upcoming Projects</h2>
-    <div class="divider reveal"></div>
-    <div class="upcoming-grid">
-      <div class="upcoming-card reveal">
-        <div class="upcoming-placeholder"></div>
-        <span class="upcoming-tag">Upcoming</span>
-        <h3>Project Coming Soon</h3>
-        <p>Details will be announced. Stay tuned.</p>
-      </div>
-      <div class="upcoming-card reveal">
-        <div class="upcoming-placeholder"></div>
-        <span class="upcoming-tag">Upcoming</span>
-        <h3>Project Coming Soon</h3>
-        <p>Details will be announced. Stay tuned.</p>
-      </div>
-      <div class="upcoming-card reveal">
-        <div class="upcoming-placeholder"></div>
-        <span class="upcoming-tag">Upcoming</span>
-        <h3>Project Coming Soon</h3>
-        <p>Details will be announced. Stay tuned.</p>
-      </div>
-      <div class="upcoming-card reveal">
-        <div class="upcoming-placeholder"></div>
-        <span class="upcoming-tag">Upcoming</span>
-        <h3>Project Coming Soon</h3>
-        <p>Details will be announced. Stay tuned.</p>
-      </div>
-    </div>
-  </section>
+
 
   <!-- FOOTER -->
   <footer>

@@ -1,0 +1,46 @@
+SKYLINE ELEVATORS — PROJECT DATA
+Fill in: Floors | Elevators | Status (Finished / In Progress / New)
+========================================================================
+
+355 Exterior             | Floors: 45  | Elevators:    | Status:
+1723 Boston Rd           | Floors: 10  | Elevators: 2  | Status: Completed
+880 Atlantic             | Floors: 20  | Elevators: 5  | Status:
+102 Fleet Pl             | Floors: 32  | Elevators: 5 Runing at 500FPM 1 Freight 1 Hydro 1 wheel chair lift | Status: In proggress
+188 Bainbridge           | Floors: 9   | Elevators: 2  | Status:
+162 East 36th St         | Floors: 26  | Elevators: 2  | Status:
+1580 Story Ave           | Floors: 22  | Elevators: 8 500FPM  | Status: In progress
+280 Bergen               | Floors: 30  | Elevators: 8  | Status:
+370 Livingston           | Floors: 26  | Elevators: 6 500FPM  | Status: in progress
+1655 1st Ave             | Floors: 25  | Elevators: 4 500FMP  | Status:
+234 Clarkson             | Floors: 3   | Elevators: 4 | Status:
+100 Lee Ave              | Floors: 16  | Elevators: 1  | Status:
+735 Myrtle Ave           | Floors: 10  | Elevators: 2  | Status:
+65 Franklin St           | Floors: 27 | Elevators: 3 500FMP  | Status: Upcoming
+498 Columbia St          | Floors: 9   | Elevators: 1  | Status:
+178 Throop Ave           | Floors: 6   | Elevators: 2  | Status:
+3377 Eastchester Rd      | Floors: 14  | Elevators: 6  | Status:
+16 Lenox Ave             | Floors: 8   | Elevators: 1  | Status:
+535 Grand St             | Floors: 10  | Elevators: 3  | Status:
+35 W 125th St            | Floors: 16  | Elevators: 2  | Status:
+440 40th St              | Floors: 7   | Elevators: 2  | Status:
+67 4th Ave               | Floors: 15  | Elevators: 2  | Status:
+448 Park Ave             | Floors: 6   | Elevators: 1  | Status:
+343 Himrod St            | Floors: 12  | Elevators: 2  | Status:
+101 Myrtle Ave SI        | Floors: 3   | Elevators: 1  | Status:
+860 Flushing Ave         | Floors: 13  | Elevators: 2  | Status:
+1042 Atlantic Ave        | Floors:     | Elevators:    | Status:
+547 Coney Island Ave     | Floors:     | Elevators:    | Status:
+177 Wyckoff Ave          | Floors:     | Elevators:    | Status:
+449 Broadway             | Floors:     | Elevators:    | Status:
+950 Fingerboard Rd       | Floors:     | Elevators:    | Status:
+1805 University Ave      | Floors:     | Elevators:    | Status:
+74 Throop Ave            | Floors:     | Elevators:    | Status:
+1305 Rockaway Ave        | Floors:     | Elevators:    | Status:
+1537 Vyse Ave            | Floors:     | Elevators:    | Status:
+682 Bedford Ave          | Floors:     | Elevators:    | Status:
+1935 Bedford Ave         | Floors:     | Elevators:    | Status:
+670 Thomas St            | Floors:     | Elevators:    | Status:
+247 E 117th St           | Floors:     | Elevators:    | Status:
+219 Herman St            | Floors:     | Elevators:    | Status:
+47 Broadway              | Floors:     | Elevators:    | Status:
+37 40th St               | Floors:     | Elevators:    | Status:

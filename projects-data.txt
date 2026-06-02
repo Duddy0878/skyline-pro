@@ -40,8 +40,8 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 682 Bedford Ave          | Floors:     | Elevators:    | Status:
 1935 Bedford Ave         | Floors:     | Elevators:    | Status:
 670 Thomas St            | Floors:     | Elevators:    | Status:
-247 E 117th St           | Floors:     | Elevators:    | Status:
+247 E 117th St           | Floors:  18   | Elevators: 1 500fpm   | Status: upcoming
 219 Herman St            | Floors:     | Elevators:    | Status:
 47 Broadway              | Floors:     | Elevators:    | Status:
 37 40th St               | Floors:     | Elevators:    | Status:
-313 E 17th St            | Floors:     | Elevators:    | Status:
+313 E 17th St            | Floors:  15   | Elevators: 2 350fpm   | Status: competed

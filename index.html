@@ -744,7 +744,7 @@
         <img class="project-thumb" src="projects/project-355-exterior.jpeg" alt="355 exterior The Bronx" />
         <div class="project-info">
           <h3>355 Exterior</h3>
-          <p>The Bronx · 42 Stops · 3×800FPM · 2×500FPM · 3×200FPM · 2 Freight</p>
+          <p>The Bronx · 42 Stops · 3800FPM · 2500FPM · 3200FPM · 2 Freight</p>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -768,7 +768,7 @@
         <img class="project-thumb" src="projects/project-102-fleet.jpg" alt="102 Fleet" />
         <div class="project-info">
           <h3>102 Fleet Pl</h3>
-          <p>32 Stops · 5×500FPM · 1 Freight · 1 Hydro · 1 Wheelchair</p>
+          <p>32 Stops · 5500FPM · 1 Freight · 1 Hydro · 1 Wheelchair</p>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -792,7 +792,7 @@
         <img class="project-thumb" src="projects/project-1580-story.jpeg" alt="1580 Story" style="object-position: center 15%;" />
         <div class="project-info">
           <h3>1580 Story Ave</h3>
-          <p>The Bronx · 22 Stops · 8×500FPM</p>
+          <p>The Bronx · 22 Stops · 8500FPM</p>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -800,7 +800,7 @@
         <img class="project-thumb" src="projects/bergan.jpeg" alt="280 Bergen" style="object-position: center 30%;" />
         <div class="project-info">
           <h3>280 Bergen</h3>
-          <p>Brooklyn · 14 Stops · 8×350FPM · 1 Hydro</p>
+          <p>Brooklyn · 14 Stops · 8350FPM · 1 Hydro</p>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
@@ -809,7 +809,7 @@
         <span class="project-new-badge">New</span>
         <div class="project-info">
           <h3>234 Clarkson</h3>
-          <p>Brooklyn · 11 Stops · 4×200FPM</p>
+          <p>Brooklyn · 11 Stops · 4200FPM</p>
           <span class="project-tag tag-upcoming">Upcoming</span>
         </div>
       </div>
@@ -817,7 +817,7 @@
         <img class="project-thumb" src="projects/livingston.jpeg" alt="370 Livingston" style="object-position: center 20%;" />
         <div class="project-info">
           <h3>370 Livingston</h3>
-          <p>Brooklyn · 26 Stops · 6×500FPM</p>
+          <p>Brooklyn · 26 Stops · 6500FPM</p>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -825,7 +825,7 @@
         <img class="project-thumb" src="projects/project-1655-1stave.jpeg" alt="1655 1st Ave" style="object-position: center 10%;" />
         <div class="project-info">
           <h3>1655 1st Ave</h3>
-          <p>New York · 25 Stops · 4×500FPM</p>
+          <p>New York · 25 Stops · 4500FPM</p>
           <span class="project-tag tag-inprogress">In Progress</span>
         </div>
       </div>
@@ -874,24 +874,24 @@
         <div class="form-row">
           <div class="form-field">
             <label>First Name</label>
-            <input type="text" placeholder="John" />
+            <input type="text" name="first_name" placeholder="John" required />
           </div>
           <div class="form-field">
             <label>Last Name</label>
-            <input type="text" placeholder="Smith" />
+            <input type="text" name="last_name" placeholder="Smith" />
           </div>
         </div>
         <div class="form-field">
           <label>Email</label>
-          <input type="email" placeholder="john@example.com" />
+          <input type="email" name="email" placeholder="john@example.com" required />
         </div>
         <div class="form-field">
           <label>Phone</label>
-          <input type="tel" placeholder="(555) 000-0000" />
+          <input type="tel" name="phone" placeholder="(555) 000-0000" />
         </div>
         <div class="form-field">
           <label>Message</label>
-          <textarea placeholder="Tell us about your project…"></textarea>
+          <textarea name="message" placeholder="Tell us about your project…"></textarea>
         </div>
         <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
         <p id="formSuccess" style="display:none; margin-top:1rem; color:var(--gold); font-size:0.9rem; letter-spacing:0.05em;">✓ Message sent! We'll be in touch shortly.</p>

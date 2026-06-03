@@ -20,9 +20,9 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 178 Throop Ave           | Floors: 9   | Elevators: 1 200fpm  | Status: in progress
 3377 Eastchester Rd      | Floors: 5  | Elevators: 1 200fpm  | Status: upcoming
 16 Lenox Ave             | Floors: 11  | Elevators: 1 350Mpf | Status: in progress
-535 Grand St             | Floors: 8  | Elevators: 1 200FPM  | Status: compltede
+533 Grand St             | Floors: 8  | Elevators: 1 200FPM  | Status: compltede
 35 W 125th St            | Floors: 23  | Elevators: 2 500fpm | Status: in progress
-41040 40th St              | Floors: 6  | Elevators: 1 200fpm  | Status: upcoming
+410 40th St              | Floors: 6  | Elevators: 1 200fpm  | Status: upcoming
 67 4th Ave               | Floors: 15  | Elevators: 2  | Status: upcomimng
 448 Park Ave             | Floors: 9   | Elevators: 1 200fpm  | Status: in progress
 343 Himrod St            | Floors: 12  | Elevators: 2 200fpm | Status: completed
@@ -45,3 +45,4 @@ Fill in: Floors | Elevators | Status (Finished / In Progress / New)
 47 Broadway              | Floors:     | Elevators:    | Status:
 37 40th St               | Floors:     | Elevators:    | Status:
 313 E 17th St            | Floors:  15   | Elevators: 2 350fpm   | Status: competed
+639 grand                  floors 13      1 elevator 350fpm status upcoming
